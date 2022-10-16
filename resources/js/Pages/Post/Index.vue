@@ -11,14 +11,22 @@
         </div>
         <div v-if="posts">
             <div
-                class="mt-8 pt-8 border-t border-gray-500"
+                class="mt-8 pt-8 border-t border-sky-500"
                 v-for="post in posts"
             >
                 <div>id: {{ post.id }}</div>
                 <div>title: {{ post.title }}</div>
                 <div>content: {{ post.content }}</div>
-                <div>created_at: {{ post.created_at }}</div>
-                <div>updated_at: {{ post.updated_at }}</div>
+                <div class="text-sm text-right">
+                    created_at: {{ post.date }}
+                </div>
+                <div class="text-sm text-right">
+                    <Link
+                        :href="route('post.show', post.id)"
+                        class="text-sm mb-8 text-sky-500"
+                        >Show</Link
+                    >
+                </div>
             </div>
         </div>
     </div>

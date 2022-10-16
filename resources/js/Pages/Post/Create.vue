@@ -41,19 +41,18 @@ export default {
     components: {
         Link,
     },
-
+    data() {
+        return {
+            title: "",
+            content: "",
+        };
+    },
     methods: {
         store() {
             this.$inertia.post("/posts", {
                 title: this.title,
                 content: this.content,
             });
-        },
-        date() {
-            return {
-                title: "",
-                content: "",
-            };
         },
     },
 };
