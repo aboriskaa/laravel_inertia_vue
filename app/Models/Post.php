@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
    protected $guarded = false;
-   protected $table  = 'posts'
+   protected $table  = 'posts';
 }
